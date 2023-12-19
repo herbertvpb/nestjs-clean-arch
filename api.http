@@ -1,0 +1,24 @@
+GET http://localhost:3000/projects
+
+###
+GET http://localhost:3000/projects/cbb53880-a2fc-4d15-86e5-ccd2bf7ab443
+
+###
+POST http://localhost:3000/projects
+Content-Type: application/json
+
+{
+    "name": "Project 4",
+    "description": "Description 4",
+    "started_at": "2024-01-01"
+}
+
+###
+PATCH http://localhost:3000/projects/0804dc4e-af35-427d-bab5-6522a1c7abeb
+Content-Type: application/json
+
+{
+    "name": "Project 1 UPDATED",
+    "description": "Description 1 UPDATED",
+    "started_at": "2020-01-01"
+}
