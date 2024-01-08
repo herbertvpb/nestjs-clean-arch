@@ -7,7 +7,6 @@ import { Repository } from 'typeorm';
 
 @Injectable()
 export class ProjectsService {
-
   constructor(
     @InjectRepository(Project)
     private projectRepo: Repository<Project>, // Repository de Project
