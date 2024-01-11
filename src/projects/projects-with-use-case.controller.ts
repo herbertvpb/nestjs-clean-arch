@@ -4,6 +4,7 @@ import {
   Post,
   Body,
   Param,
+  Inject,
   // Patch,
   // Param,
   // Delete,
@@ -18,11 +19,20 @@ import { StartProjectDto } from './dto/start-project.dto';
 
 @Controller('projects')
 export class ProjectsWithUseCaseController {
-  constructor(
-    private readonly createProjectUseCase: CreateProjectUseCase,
-    private readonly findAllProjectsUseCase: FindAllProjectsUseCase,
-    private readonly startProjectUseCase: StartProjectUseCase,
-  ) {}
+  @Inject(CreateProjectUseCase)
+  private readonly createProjectUseCase: CreateProjectUseCase;
+
+  @Inject(FindAllProjectsUseCase)
+  private readonly findAllProjectsUseCase: FindAllProjectsUseCase;
+
+  @Inject(StartProjectUseCase)
+  private readonly startProjectUseCase: StartProjectUseCase;
+
+  // constructor(
+  //   private readonly createProjectUseCase: CreateProjectUseCase,
+  //   private readonly findAllProjectsUseCase: FindAllProjectsUseCase,
+  //   private readonly startProjectUseCase: StartProjectUseCase,
+  // ) {}
 
   @Post()
   create(@Body() createProjectDto: CreateProjectDto) {

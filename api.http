@@ -9,8 +9,8 @@ POST http://localhost:3000/projects
 Content-Type: application/json
 
 {
-    "name": "Project X",
-    "description": "Description X"
+    "name": "Project 1101",
+    "description": "Description 1101"
 }
 
 ###
@@ -24,9 +24,9 @@ Content-Type: application/json
 }
 
 ### Start
-POST http://localhost:3000/projects/6e7ae4d7-842f-46e8-bdbd-5fb5012be240/start
+POST http://localhost:3000/projects/2976665f-66f2-497c-9d6b-a70bcc8e0daf/start
 Content-Type: application/json
 
 {
-    "started_at": "2024-01-01"
+    "started_at": "2024-01-11"
 }
